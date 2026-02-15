@@ -123,8 +123,7 @@ taskboard-app/
 ### 1️⃣ Clone the repository
 
 - git clone https://github.com/Himanshuazad03/taskboard-application.git
-
-
+- cd taskboard-application
 
 ### 2️⃣ Install dependencies
 
