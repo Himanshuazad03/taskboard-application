@@ -32,8 +32,8 @@ const boardSlice = createSlice({
         message: `Task "${action.payload.title}" created`,
         timestamp: new Date().toISOString(),
       });
-      if (state.activityLog.length > 7) {
-        state.activityLog = state.activityLog.slice(0, 7);
+      if (state.activityLog.length > 6) {
+        state.activityLog = state.activityLog.slice(0, 6);
       }
       saveToStorage('tasks', state.tasks);
       saveToStorage('activityLog', state.activityLog);
@@ -46,8 +46,8 @@ const boardSlice = createSlice({
           message: `Task "${action.payload.title}" edited`,
           timestamp: new Date().toISOString(),
         });
-        if (state.activityLog.length > 7) {
-          state.activityLog = state.activityLog.slice(0, 7);
+        if (state.activityLog.length > 6) {
+          state.activityLog = state.activityLog.slice(0, 6);
         }
         saveToStorage('tasks', state.tasks);
         saveToStorage('activityLog', state.activityLog);
@@ -61,8 +61,8 @@ const boardSlice = createSlice({
           message: `Task "${task.title}" deleted`,
           timestamp: new Date().toISOString(),
         });
-        if (state.activityLog.length > 7) {
-          state.activityLog = state.activityLog.slice(0, 7);
+        if (state.activityLog.length > 6) {
+          state.activityLog = state.activityLog.slice(0, 6);
         }
         saveToStorage('tasks', state.tasks);
         saveToStorage('activityLog', state.activityLog);
@@ -76,8 +76,8 @@ const boardSlice = createSlice({
           message: `Task "${task.title}" moved to ${action.payload.newStatus}`,
           timestamp: new Date().toISOString(),
         });
-        if (state.activityLog.length > 7) {
-          state.activityLog = state.activityLog.slice(0, 7);
+        if (state.activityLog.length > 6) {
+          state.activityLog = state.activityLog.slice(0, 6);
         }
         saveToStorage('tasks', state.tasks);
         saveToStorage('activityLog', state.activityLog);
@@ -89,8 +89,8 @@ const boardSlice = createSlice({
         message: 'Board reset',
         timestamp: new Date().toISOString(),
       });
-      if (state.activityLog.length > 7) {
-        state.activityLog = state.activityLog.slice(0, 7);
+      if (state.activityLog.length > 6) {
+        state.activityLog = state.activityLog.slice(0, 6);
       }
       saveToStorage('tasks', state.tasks);
       saveToStorage('activityLog', state.activityLog);
@@ -100,8 +100,8 @@ const boardSlice = createSlice({
         message: action.payload,
         timestamp: new Date().toISOString(),
       });
-      if (state.activityLog.length > 7) {
-        state.activityLog = state.activityLog.slice(0, 7);
+      if (state.activityLog.length > 6) {
+        state.activityLog = state.activityLog.slice(0, 6);
       }
       saveToStorage('activityLog', state.activityLog);
     },
