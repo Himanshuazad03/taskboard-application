@@ -48,7 +48,7 @@ export function BoardNavbar() {
               placeholder="Search tasks..."
               value={searchValue}
               onChange={(e) => handleSearchChange(e.target.value)}
-              className="pl-9 h-9 bg-slate-50 border-slate-200 cursor-pointer"
+              className="pl-9 h-9 bg-slate-50 border-slate-200"
               data-testid="search-input"
             />
           </div>
