@@ -48,7 +48,7 @@ export function BoardNavbar() {
               placeholder="Search tasks..."
               value={searchValue}
               onChange={(e) => handleSearchChange(e.target.value)}
-              className="pl-9 h-9 bg-slate-50 border-slate-200"
+              className="pl-9 h-9 bg-slate-50 border-slate-200 cursor-pointer"
               data-testid="search-input"
             />
           </div>
@@ -57,7 +57,7 @@ export function BoardNavbar() {
             value={filters.priority || 'all'}
             onValueChange={(value) => dispatch(setPriority(value === 'all' ? null : value))}
           >
-            <SelectTrigger className="w-32 h-9 bg-slate-50 border-slate-200" data-testid="priority-filter">
+            <SelectTrigger className="w-32 h-9 bg-slate-50 border-slate-200 cursor-pointer" data-testid="priority-filter">
               <SelectValue placeholder="Priority" />
             </SelectTrigger>
             <SelectContent>
@@ -72,7 +72,7 @@ export function BoardNavbar() {
             value={filters.sort}
             onValueChange={(value) => dispatch(setSort(value as 'asc' | 'desc'))}
           >
-            <SelectTrigger className="w-32 h-9 bg-slate-50 border-slate-200" data-testid="sort-select">
+            <SelectTrigger className="w-32 h-9 bg-slate-50 border-slate-200 cursor-pointer" data-testid="sort-select">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -85,8 +85,8 @@ export function BoardNavbar() {
         <div className="flex items-center gap-2">
           <AlertDialog>
             <AlertDialogTrigger asChild>
-              <Button variant="outline" size="sm" className="h-9" data-testid="reset-board-button">
-                <RotateCcw className="h-4 w-4 mr-2" />
+              <Button variant="outline" size="sm" className="h-9 cursor-pointer" data-testid="reset-board-button">
+                <RotateCcw className="h-4 w-4 mr-2 " />
                 Reset Board
               </Button>
             </AlertDialogTrigger>
@@ -98,15 +98,15 @@ export function BoardNavbar() {
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction onClick={handleResetBoard} className="bg-red-600 hover:bg-red-700">
+                <AlertDialogCancel className='cursor-pointer'>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={handleResetBoard} className="bg-red-600 hover:bg-red-700 cursor-pointer">
                   Reset
                 </AlertDialogAction>
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
 
-          <Button variant="ghost" size="sm" onClick={handleLogout} className="h-9" data-testid="logout-button">
+          <Button variant="ghost" size="sm" onClick={handleLogout} className="h-9 cursor-pointer" data-testid="logout-button">
             <LogOut className="h-4 w-4 mr-2" />
             Logout
           </Button>

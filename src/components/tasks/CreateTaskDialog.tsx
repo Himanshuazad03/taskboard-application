@@ -63,7 +63,7 @@ export function CreateTaskDialog() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="sm" className="h-8" data-testid="create-task-button">
+        <Button size="sm" className="h-8 cursor-pointer" data-testid="create-task-button">
           <Plus className="h-4 w-4" />
         </Button>
       </DialogTrigger>
@@ -152,10 +152,10 @@ export function CreateTaskDialog() {
           )}
 
           <div className="flex justify-end gap-2 pt-2">
-            <Button type="button" variant="outline" onClick={() => setOpen(false)}>
+            <Button type="button" className='cursor-pointer' variant="outline" onClick={() => setOpen(false)}>
               Cancel
             </Button>
-            <Button type="submit" data-testid="submit-task-button">
+            <Button type="submit" className='cursor-pointer' data-testid="submit-task-button">
               Create Task
             </Button>
           </div>
