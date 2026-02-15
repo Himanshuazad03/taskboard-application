@@ -122,8 +122,9 @@ taskboard-app/
 
 ### 1️⃣ Clone the repository
 
-git clone <repository-url>
-cd todo-project
+- git clone https://github.com/Himanshuazad03/taskboard-application.git
+
+
 
 ### 2️⃣ Install dependencies
 
