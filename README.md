@@ -61,15 +61,15 @@ Reducers handle:
 
 ## 📁 Project Structure
 
-todo-project/
-│
-├── _tests_/                     
+```
+taskboard-app/
+├── __tests__/
 │   ├── login.test.tsx
 │   ├── taskCreate.test.tsx
 │   └── taskDelete.test.tsx
 │
 ├── src/
-│   ├── app/                     
+│   ├── app/
 │   │   ├── layout.tsx
 │   │   ├── page.tsx
 │   │   ├── login/
@@ -81,12 +81,10 @@ todo-project/
 │   │   ├── board/
 │   │   │   ├── BoardColumns.tsx
 │   │   │   └── Column.tsx
-│   │   │
 │   │   ├── tasks/
 │   │   │   ├── TaskCard.tsx
 │   │   │   └── CreateTaskDialog.tsx
-│   │   │
-│   │   └── ui/                  
+│   │   └── ui/
 │   │       ├── button.tsx
 │   │       ├── dialog.tsx
 │   │       ├── input.tsx
@@ -96,18 +94,18 @@ todo-project/
 │   │       ├── alert-dialog.tsx
 │   │       └── scroll-area.tsx
 │   │
-│   ├── store/                   
-│   │   ├── index.ts             
+│   ├── store/
+│   │   ├── index.ts
 │   │   ├── authSlice.ts
 │   │   └── boardSlice.ts
 │   │
-│   ├── lib/                     
-│   │   ├── types.ts
-│   │   ├── storage.ts
-│   │   └── utils.ts
-│   │
-│   └── styles/
-│       └── globals.css
+│   └── lib/
+│       ├── types.ts
+│       ├── storage.ts
+│       └── utils.ts
+│
+├── styles/
+│   └── globals.css
 │
 ├── public/
 │
@@ -118,8 +116,7 @@ todo-project/
 ├── tsconfig.json
 ├── package.json
 └── README.md
-
----
+```
 
 ## ⚙️ Installation & Setup
 
