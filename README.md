@@ -122,22 +122,54 @@ taskboard-app/
 
 ### 1️⃣ Clone the repository
 
-- git clone https://github.com/Himanshuazad03/taskboard-application.git
-- cd taskboard-application
+```bash
+git clone https://github.com/Himanshuazad03/taskboard-application.git
+cd taskboard-application
+```
 
 ### 2️⃣ Install dependencies
 
+```bash
 npm install
+```
 
 ### 3️⃣ Run development server
 
-Open in browser: http://localhost:3000
+```bash
+npm run dev
+```
 
+Open in your browser: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🐳 Running with Docker
+
+You can run the application containerized using Docker without installing Node.js locally:
+
+### 1️⃣ Build the Docker image
+
+```bash
+docker build -t taskboard-application .
+```
+
+### 2️⃣ Run the Docker container
+
+```bash
+docker run -p 3000:3000 taskboard-application
+```
+
+Once started, open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
 ## 🧪 Run Tests
 
+To run the unit test suite:
+
+```bash
+npm run test
+```
 
 Tests are written using:
 - Jest
